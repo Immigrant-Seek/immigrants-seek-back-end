@@ -6,11 +6,11 @@
 module.exports = {
 
     development: {
-        client: 'postgresql',
+        client: process.env.DB_CLIENT || 'postgresql',
         connection: {
-            database: 'dreamsbridge',
-            user: 'markrrr',
-            password: '12'
+            database: process.env.DB_DATABASE || 'dreamsbridge',
+            user: process.env.DB_USER || 'liam',
+            password: process.env.DB_PASSWORD || '',
         }
     },
 

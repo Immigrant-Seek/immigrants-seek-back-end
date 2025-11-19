@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const connectionDevelopment = {
-    database: 'dreamsbridge', // Replace this with your DB name
-    user: 'markrrr', // If you have a different postgres user, replace here
-    password: '12', // If you have a postgres password, write it here
-    host: 'localhost'
+    database: process.env.DB_DATABASE || '',
+    user: process.env.DB_USER || '',
+    password: process.env.DB_PASSWORD || '',
+    host: process.env.DB_HOST || 'localhost'
 }
 
 const connectionProduction = {
